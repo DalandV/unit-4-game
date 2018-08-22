@@ -1,0 +1,30 @@
+#first-div {
+    background: orange;
+    color: white;
+}
+
+#second-div {
+    background: palegoldenrod;
+    color: green;
+}
+
+#third-div {
+    background: lightgreen;
+    padding: 0, 50px, 50px, 0;
+}
+
+#fourth-div {
+    background: turquoise;
+}
+
+#third-row {
+    padding: 5px;
+}
+
+/* #seventh-div {
+  padding: 0, 50px, 50px, 0;
+} */
+
+.last-2-divs {
+    background: teal;
+}
