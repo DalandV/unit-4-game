@@ -3,8 +3,6 @@ $(document).ready(function () {
     // Variables
     // ===========================
 
-    //ARRAY OF OBJECTS
-
     var randomNumber = getRandomInt(19, 121);
 
     var wins = 0;
@@ -13,16 +11,8 @@ $(document).ready(function () {
 
     var totalScore = [0];
 
+    //stores the numbers that each crystal is worth
     var gemNumbers = [];
-
-    // var gemClicked = false
-
-    // var whateverGemWasClicked;
-
-    // var redGemClicked = false
-    // var blueGemClicked = false
-    // var yellowGemClicked = false
-    // var greenGemClicked = false
 
     // Functions
     // ===========================
@@ -40,13 +30,11 @@ $(document).ready(function () {
         wins = 0;
         losses = 0;
         gemNumbers = [];
+        totalScore = [0];
         // generate gem numbers and store them in gemNumbers Array
-        $("img").each(function () {
+        $(".gem").each(function () {
             gemNumbers.push(getRandomInt(1, 13));
         });
-
-
-        totalScore = [0];
         $("#third-div").html(randomNumber);
         $("#wins").html(wins);
         $("#losses").html(losses);
@@ -56,7 +44,7 @@ $(document).ready(function () {
         randomNumber = getRandomInt(19, 121);
         gemNumbers = [];
         // generate gem numbers and store them in gemNumbers Array
-        $("img").each(function () {
+        $(".gem").each(function () {
             gemNumbers.push(getRandomInt(1, 13));
         });
         totalScore = [0];
@@ -68,6 +56,51 @@ $(document).ready(function () {
     // push numbers in gemNumbers Array to totalScore Array
     $("#red-gem").on("click", function () {
         totalScore.push(gemNumbers[0]);
+        console.log(totalScore)
+
+
+        if (totalScore.reduce(getSum) === randomNumber) {
+            wins++
+            resetNumAndScore()
+        }
+        else if (totalScore.reduce(getSum) > randomNumber) {
+            losses++
+            resetNumAndScore()
+        };
+        $("#seventh-div").html(totalScore.reduce(getSum));
+    });
+    $("#blue-gem").on("click", function () {
+        totalScore.push(gemNumbers[1]);
+        console.log(totalScore)
+
+
+        if (totalScore.reduce(getSum) === randomNumber) {
+            wins++
+            resetNumAndScore()
+        }
+        else if (totalScore.reduce(getSum) > randomNumber) {
+            losses++
+            resetNumAndScore()
+        };
+        $("#seventh-div").html(totalScore.reduce(getSum));
+    });
+    $("#yellow-gem").on("click", function () {
+        totalScore.push(gemNumbers[2]);
+        console.log(totalScore)
+
+
+        if (totalScore.reduce(getSum) === randomNumber) {
+            wins++
+            resetNumAndScore()
+        }
+        else if (totalScore.reduce(getSum) > randomNumber) {
+            losses++
+            resetNumAndScore()
+        };
+        $("#seventh-div").html(totalScore.reduce(getSum));
+    });
+    $("#green-gem").on("click", function () {
+        totalScore.push(gemNumbers[3]);
         console.log(totalScore)
 
 
