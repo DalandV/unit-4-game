@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
 
-
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Crystals Collector</title>
+  </head>
 
-</head>
-
-
-<body>
-
+  <body>
     <div class="container">
-        <div class="row justify-content-center ">
-            <div class="col-md-10" style="background: lightblue">
-                <div class="row">
-                    <div class="col-md-4 m-2" id="first-div">
-                        <h1>Crystals Collector!</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 ml-2" id="second-div">
-                        <p>You will be given a random number at the start of the game.</p>
-                        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points
-                            to your total score.</p>
-                        <p>You win the game by matching your total score to random number, you lose the game if your total
-                            score goes above the random number.</p>
-                        <p>The value of each crystal is hidden from you until you click on it.</p>
-                        <p>Each time the game starts, the game will change the values of each crystal.</p>
-                    </div>
-                </div>
-                <div class="row p-0" id="third-row">
-                    <div class="col-md-3 p-0 pl-1 m-2" id="third-div">
-
-                    </div>
-                    <div class="col-md-1 p-1 my-2" id="fourth-div">
-                        <p class="mb-1">Wins: <span id="wins"></span></p>
-                        <p class="mb-1">Losses: <span id="losses"></span></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-5 p-0 ml-2">
-                        <img class="gem" id="red-gem" src="assets/images/red-gem.png" alt="red gem">
-                        <img class="gem" id="blue-gem" src="assets/images/blue-gem.png" alt="blue gem">
-                        <img class="gem" id="yellow-gem" src="assets/images/yellow-gem.png" alt="yellow gem">
-                        <img class="gem" id="green-gem" src="assets/images/green-gem.png" alt="green gem">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 last-2-divs m-2 p-0 pl-1" id="sixth-div">
-                        <p class="mb-0">Your total score is: </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 last-2-divs pb-5 pl-1 mb-2 ml-2" id="seventh-div">
-
-                    </div>
-                </div>
-
+      <div class="row justify-content-center ">
+        <div class="col-md-10" style="background: lightblue">
+          <div class="row">
+            <div class="col-md-4 m-2" id="first-div">
+              <h1>Crystals Collector!</h1>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 ml-2" id="second-div">
+              <p>You will be given a random number at the start of the game.</p>
+              <p>
+                There are four crystals below. By clicking on a crystal you will
+                add a specific amount of points to your total score.
+              </p>
+              <p>
+                You win the game by matching your total score to random number,
+                you lose the game if your total score goes above the random
+                number.
+              </p>
+              <p>
+                The value of each crystal is hidden from you until you click on
+                it.
+              </p>
+              <p>
+                Each time the game starts, the game will change the values of
+                each crystal.
+              </p>
+            </div>
+          </div>
+          <div class="row p-0" id="third-row">
+            <div class="col-md-3 p-0 pl-1 m-2" id="third-div"></div>
+            <div class="col-md-1 p-1 my-2" id="fourth-div">
+              <p class="mb-1">Wins: <span id="wins"></span></p>
+              <p class="mb-1">Losses: <span id="losses"></span></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5 p-0 ml-2">
+              <img
+                class="gem"
+                id="red-gem"
+                src="assets/images/red-gem.png"
+                alt="red gem"
+              />
+              <img
+                class="gem"
+                id="blue-gem"
+                src="assets/images/blue-gem.png"
+                alt="blue gem"
+              />
+              <img
+                class="gem"
+                id="yellow-gem"
+                src="assets/images/yellow-gem.png"
+                alt="yellow gem"
+              />
+              <img
+                class="gem"
+                id="green-gem"
+                src="assets/images/green-gem.png"
+                alt="green gem"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 last-2-divs m-2 p-0 pl-1" id="sixth-div">
+              <p class="mb-0">Your total score is:</p>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-md-3 last-2-divs pb-5 pl-1 mb-2 ml-2"
+              id="seventh-div"
+            ></div>
+          </div>
         </div>
-
-
+      </div>
     </div>
 
-
     <script src="assets/javascript/game.js"></script>
-
-</body>
-
+  </body>
 </html>
